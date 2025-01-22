@@ -202,7 +202,9 @@ document.addEventListener('DOMContentLoaded', () => {
     // Handle downloads in new tabs
     const downloadLinks = {
         theory1: "https://drive.google.com/file/d/1TXNwvdbYQQ_4k8X3A-5rKZIvTj3MbHIn/view?usp=drive_link",
-        sim1: "https://drive.google.com/file/d/1rvim5sjtIv5KUosLEzQ0GVn59uOx0TUA/view?usp=sharing"
+        theory2: "https://drive.google.com/file/d/1akKmkXKPmZWZFJWYY0F7UdxCTdePWMgP/view?usp=sharing",
+        sim1: "https://drive.google.com/file/d/1rvim5sjtIv5KUosLEzQ0GVn59uOx0TUA/view?usp=sharing",
+        sim2: "https://drive.google.com/file/d/1iwHlU7T_dRVOzjBT9YMGeTGP-um2qcrt/view?usp=sharing"
     };
 
     document.querySelectorAll('[data-download]').forEach(link => {
