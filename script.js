@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const ctx = canvas.getContext('2d');
     const effectButton = document.getElementById('effectButton');
     const effectMenu = document.querySelector('.effect-menu');
-    let currentEffect = 'snow'; // 'snow', 'rain', 'fireworks'
+    let currentEffect = 'fireworks'; // Changed from 'snow' to 'fireworks'
     let particles = [];
     
     function resizeCanvas() {
@@ -196,6 +196,23 @@ document.addEventListener('DOMContentLoaded', () => {
             setTimeout(() => {
                 btn.style.transform = 'scale(1)';
             }, 100);
+        });
+    });
+
+    // Handle downloads in new tabs
+    const downloadLinks = {
+        theory1: "https://drive.google.com/file/d/1TXNwvdbYQQ_4k8X3A-5rKZIvTj3MbHIn/view?usp=drive_link",
+        sim1: "https://drive.google.com/file/d/1rvim5sjtIv5KUosLEzQ0GVn59uOx0TUA/view?usp=sharing"
+    };
+
+    document.querySelectorAll('[data-download]').forEach(link => {
+        link.addEventListener('click', (e) => {
+            e.preventDefault();
+            const linkType = link.getAttribute('data-download');
+            const url = downloadLinks[linkType];
+            if (url) {
+                window.open(url, '_blank');
+            }
         });
     });
 });
